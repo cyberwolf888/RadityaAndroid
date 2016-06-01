@@ -1,54 +1,54 @@
 package com.example.mangpande.radityaholding;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class DashboardPetugas extends AppCompatActivity {
-    public static final String MyPREFERENCES = "MyPrefs" ;
-    public static final String Name = "username";
-    public static final String Pass = "password";
-    public static final String ID = "id_profile";
-    SharedPreferences sharedpreferences;
-
+    ImageButton ibTagihan;
+    ImageButton ibLihatKredit;
+    Helper helper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        helper = new Helper(DashboardPetugas.this);
+        if(!helper.validateLogin()){
+            startActivity(new Intent(this, Login.class));
+        }
         setContentView(R.layout.activity_dashboard_petugas);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-       /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        ibTagihan = (ImageButton) findViewById(R.id.ibTagihan);
+        ibLihatKredit = (ImageButton) findViewById(R.id.ibLihatKredit);
+
+        ibTagihan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(DashboardPetugas.this, TambahKredit.class);
-                startActivity(i);
+                Intent it = new Intent(DashboardPetugas.this, Tagihan.class);
+                startActivity(it);
             }
-        });*/
-        sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
-        if(sharedpreferences.contains(Name)){
-            String name=sharedpreferences.getString(Name,"");
-            String pass=sharedpreferences.getString(Pass,"");
-            String id=sharedpreferences.getString(ID,"");
-            Toast.makeText(getApplicationContext(), name+" "+pass+" "+id, Toast.LENGTH_LONG).show();
-        }else{
-            startActivity(new Intent(this, Login.class));
-        }
+        });
+
+        ibLihatKredit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it = new Intent(DashboardPetugas.this, LihatKredit.class);
+                startActivity(it);
+            }
+        });
     }
     protected void onResume()
     {
         super.onResume();
 
-        if(!sharedpreferences.contains(Name)){
-            //Toast.makeText(getApplicationContext(), name, Toast.LENGTH_LONG).show();
+        if(!helper.validateLogin()){
             startActivity(new Intent(this, Login.class));
         }
     }
@@ -67,20 +67,10 @@ public class DashboardPetugas extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_logout) {
-            SharedPreferences.Editor editor = sharedpreferences.edit();
-            editor.clear();
-            editor.apply();
+            helper.logout();
             startActivity(new Intent(this, Login.class));
         }
 
         return super.onOptionsItemSelected(item);
-    }
-    public void tagihan (View view){
-
-        startActivity(new Intent(DashboardPetugas.this, TagihanKredit.class));
-    }
-    public void lihatkredit (View view){
-
-        startActivity(new Intent(DashboardPetugas.this, LihatKredit.class));
     }
 }

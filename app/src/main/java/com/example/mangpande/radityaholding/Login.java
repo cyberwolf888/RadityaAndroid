@@ -21,31 +21,37 @@ import java.util.HashMap;
 public class Login extends AppCompatActivity {
     EditText username,password;
 
-    public static final String MyPREFERENCES = "MyPrefs" ;
-    public static final String Name = "username";
-    public static final String Pass = "password";
-    public static final String ID = "id_profile";
     SharedPreferences sharedpreferences;
 
+    Helper helper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        helper = new Helper(Login.this);
+        if(helper.validateLogin()){
+            //Toast.makeText(getApplicationContext(), name, Toast.LENGTH_LONG).show();
+            Intent it = new Intent(this, DashboardPetugas.class);
+            startActivity(it);
+            finish();
+        }
         setContentView(R.layout.activity_login);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         username=(EditText)findViewById(R.id.etUsername);
         password=(EditText)findViewById(R.id.etPassword);
-        sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+        sharedpreferences = getSharedPreferences(helper.MyPREFERENCES, Context.MODE_PRIVATE);
 
 
     }
     protected void onResume()
     {
         super.onResume();
-        if(sharedpreferences.contains(Name)){
+        if(helper.validateLogin()){
             //Toast.makeText(getApplicationContext(), name, Toast.LENGTH_LONG).show();
-            startActivity(new Intent(this, DashboardPetugas.class));
+            Intent it = new Intent(this, DashboardPetugas.class);
+            startActivity(it);
+            finish();
         }
     }
 
@@ -82,10 +88,12 @@ public class Login extends AppCompatActivity {
                         //Log.d(Login.class.getSimpleName(), username+"--"+id_profile);
 
                         SharedPreferences.Editor editor = sharedpreferences.edit();
-                        editor.putString(Name, username);
-                        editor.putString(ID, id_profile);
+                        editor.putString(helper.Name, username);
+                        editor.putString(helper.ID, id_profile);
                         editor.commit();
-                        startActivity(new Intent(Login.this, DashboardPetugas.class));
+                        Intent it = new Intent(Login.this, DashboardPetugas.class);
+                        startActivity(it);
+                        finish();
 
                     }else{
                         Toast.makeText(getApplicationContext(), "Password atau Username salah!", Toast.LENGTH_LONG).show();
