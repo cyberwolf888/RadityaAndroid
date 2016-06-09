@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,12 +10,208 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.mangpande.radityaholding.TagihanKredit"
-    tools:showIn="@layout/activity_tagihan_kredit">
+    tools:showIn="@layout/activity_tagihan_kredit"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/penagihan_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dip"
+                android:paddingTop="6dip"
+                android:text="Barang"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tvBarang"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dip"
+                android:paddingTop="0dip"
+                android:text="Canon"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/listView"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
-</RelativeLayout>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dip"
+                android:paddingTop="6dip"
+                android:text="Nama"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tvNama"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dip"
+                android:paddingTop="0dip"
+                android:text="Nyoman Jelantik"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dip"
+                android:paddingTop="6dip"
+                android:text="Telepon"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tvTelp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dip"
+                android:paddingTop="0dip"
+                android:text="085737353569"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dip"
+                android:paddingTop="6dip"
+                android:text="Alamat"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tvAlamat"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dip"
+                android:paddingTop="0dip"
+                android:text="Jalan Cokroamnoto No.1"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dip"
+                android:paddingTop="6dip"
+                android:text="Lama Cicilan"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tvCicilan"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dip"
+                android:paddingTop="0dip"
+                android:text="12 Bulan"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dip"
+                android:paddingTop="6dip"
+                android:text="Angsuran Ke"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tvAngsuran"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dip"
+                android:paddingTop="0dip"
+                android:text="6"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dip"
+                android:paddingTop="6dip"
+                android:text="Hutang"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tvHutang"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dip"
+                android:paddingTop="0dip"
+                android:text="Rp. 1.000.000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dip"
+                android:paddingTop="6dip"
+                android:text="Sisa Hutang"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tvSisa"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dip"
+                android:paddingTop="0dip"
+                android:text="Rp. 500.000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dip"
+                android:paddingTop="6dip"
+                android:text="Bunga"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tvBunga"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dip"
+                android:paddingTop="0dip"
+                android:text="Rp. 1.000.000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dip"
+                android:paddingTop="6dip"
+                android:text="Denda"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tvDenda"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dip"
+                android:paddingTop="0dip"
+                android:text="Rp. 1.000.000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Total Bayar"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true" />
+            <EditText
+                android:id="@+id/txt_bayar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeActionId="@+id/bayar"
+                android:imeOptions="actionUnspecified"
+                android:inputType="number"
+                android:maxLines="1"/>
+
+            <Button
+                android:id="@+id/btn_tagih"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Tagih"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -21,5 +21,5 @@
     <string name="title_activity_tambah_kredit">Tambah Kredit</string>
     <string name="title_activity_search">Search</string>
     <string name="title_activity_detail">Detail</string>
-    <string name="title_activity_tagihan_kredit">TagihanKredit</string>
+    <string name="title_activity_tagihan_kredit">Tagihan</string>
 </resources>

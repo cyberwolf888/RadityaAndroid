@@ -74,18 +74,14 @@ public class Login extends AppCompatActivity {
             protected void onPostExecute(String s) {
                 super.onPostExecute(s);
                 loading.dismiss();
-               // Log.d(Login.class.getSimpleName(), s);
 
                 try {
-
                     JSONObject jObj = new JSONObject(s);
-                    //Log.d(Login.class.getSimpleName(), jObj.toString());
+                    Log.d("Response >>>>> ", s);
                     String status =  jObj.getString("status");
-                    //Log.d(Login.class.getSimpleName(), status);
                     if(status.equals("1")){
                         String username = jObj.getString("username");
                         String id_profile = jObj.getString("id");
-                        //Log.d(Login.class.getSimpleName(), username+"--"+id_profile);
 
                         SharedPreferences.Editor editor = sharedpreferences.edit();
                         editor.putString(helper.Name, username);

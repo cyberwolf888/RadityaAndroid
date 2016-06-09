@@ -12,6 +12,27 @@ import java.text.DecimalFormatSymbols;
  * Created by Master on 5/23/2016.
  */
 public class Helper extends AppCompatActivity {
+    public static final String TAG_LIST_TAGIHAN = "list_tagihan";
+    public static final String TAG_LIST_DETAIL = "list_detail";
+    public static final String TAG_LIST_ANGSURAN = "list_angsuran";
+    public static final String TAG_ID_KREDIT = "id";
+    public static final String TAG_NAMA_CUST = "nama";
+    public static final String TAG_NAMA_BARANG = "nama_barang";
+    public static final String TAG_HARGA = "harga";
+    public static final String TAG_TELAH_BAYAR = "telah_bayar";
+    public static final String TAG_SISA = "sisa";
+    public static final String TAG_LAMA_CICILAN = "lama_cicilan";
+    public static final String TAG_TGL_KREDIT = "tgl_kredit";
+    public static final String TAG_TELP = "telepon";
+    public static final String TAG_ALAMAT = "alamat";
+    public static final String TAG_BUNGA = "bunga";
+    public static final String TAG_DENDA = "denda";
+    public static final String TAG_ANGSURAN_KE = "angsuran_ke";
+    public static final String TAG_TOTAL_BAYAR = "total_bayar";
+    public static final String TAG_STATUS = "status";
+    public static final String TAG_TGL_ANGSURAN = "tgl_angsuran";
+    public static final String TAG_BAYAR_ANGSURAN = "bayar";
+
     public static final String MyPREFERENCES = "MyPrefs" ;
     public static final String Name = "username";
     public static final String Pass = "password";
