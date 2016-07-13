@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/RadityaHolding.iml" filepath="$PROJECT_DIR$/RadityaHolding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RadityaAndroid.iml" filepath="$PROJECT_DIR$/RadityaAndroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

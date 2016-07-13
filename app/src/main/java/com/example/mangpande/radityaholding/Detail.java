@@ -53,6 +53,7 @@ public class Detail extends AppCompatActivity  {
         TextView tvSisa = (TextView) findViewById(R.id.tvSisa);
         TextView tvCicilan = (TextView) findViewById(R.id.tvCicilan);
         TextView tvStatus = (TextView) findViewById(R.id.tvStatus);
+        TextView tvUangMuka = (TextView)findViewById(R.id.tvUangMuka);
 
         tvBarang.setText(RowData.get(helper.TAG_NAMA_BARANG));
         tvNama.setText(RowData.get(helper.TAG_NAMA_CUST));
@@ -61,6 +62,7 @@ public class Detail extends AppCompatActivity  {
         tvHutang.setText(RowData.get(helper.TAG_HARGA));
         tvSisa.setText(RowData.get(helper.TAG_SISA));
         tvCicilan.setText(RowData.get(helper.TAG_LAMA_CICILAN)+" bulan");
+        tvUangMuka.setText(RowData.get(helper.TAG_UANG_MUKA));
         if(RowData.get(helper.TAG_STATUS).equals("1")){
             tvStatus.setText("Proses");
         }else if (RowData.get(helper.TAG_STATUS).equals("2")){

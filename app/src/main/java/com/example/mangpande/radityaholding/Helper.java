@@ -32,6 +32,7 @@ public class Helper extends AppCompatActivity {
     public static final String TAG_STATUS = "status";
     public static final String TAG_TGL_ANGSURAN = "tgl_angsuran";
     public static final String TAG_BAYAR_ANGSURAN = "bayar";
+    public static final String TAG_UANG_MUKA = "uang_muka";
 
     public static final String MyPREFERENCES = "MyPrefs" ;
     public static final String Name = "username";

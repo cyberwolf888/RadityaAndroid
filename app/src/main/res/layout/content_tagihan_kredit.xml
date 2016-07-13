@@ -144,6 +144,23 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="2dip"
                 android:paddingTop="6dip"
+                android:text="Uang Muka"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tvUangMuka"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dip"
+                android:paddingTop="0dip"
+                android:text="12 Bulan"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dip"
+                android:paddingTop="6dip"
                 android:text="Sisa Hutang"
                 android:textSize="14sp" />
             <TextView

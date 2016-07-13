@@ -48,6 +48,7 @@ public class TagihanKredit extends AppCompatActivity {
         TextView tvAngsuran = (TextView) findViewById(R.id.tvAngsuran);
         TextView tvBunga = (TextView) findViewById(R.id.tvBunga);
         TextView tvDenda = (TextView) findViewById(R.id.tvDenda);
+        TextView tvUangMuka = (TextView) findViewById(R.id.tvUangMuka);
 
         etTotalbayar = (EditText) findViewById(R.id.txt_bayar);
 
@@ -61,6 +62,7 @@ public class TagihanKredit extends AppCompatActivity {
         tvAngsuran.setText(RowData.get(helper.TAG_ANGSURAN_KE));
         tvBunga.setText(helper.formatNumber(Integer.valueOf(RowData.get(helper.TAG_BUNGA))));
         tvDenda.setText(helper.formatNumber(Integer.valueOf(RowData.get(helper.TAG_DENDA))));
+        tvUangMuka.setText(RowData.get(helper.TAG_UANG_MUKA));
 
         etTotalbayar.setText(RowData.get(helper.TAG_TOTAL_BAYAR));
 

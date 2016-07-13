@@ -146,6 +146,7 @@ public class Tagihan extends AppCompatActivity {
                     String bunga = c.getString(helper.TAG_BUNGA);
                     String angsuran_ke = c.getString(helper.TAG_ANGSURAN_KE);
                     String total_bayar = c.getString(helper.TAG_TOTAL_BAYAR);
+                    String uang_muka = helper.formatNumber(Integer.valueOf(c.getString(helper.TAG_UANG_MUKA)));
 
                     // tmp hashmap for single student
                     HashMap<String, String> dataList = new HashMap<String, String>();
@@ -165,6 +166,7 @@ public class Tagihan extends AppCompatActivity {
                     dataList.put(helper.TAG_BUNGA, bunga);
                     dataList.put(helper.TAG_ANGSURAN_KE, angsuran_ke);
                     dataList.put(helper.TAG_TOTAL_BAYAR, total_bayar);
+                    dataList.put(helper.TAG_UANG_MUKA, uang_muka);
 
                     // adding student to students list
                     itemList.add(dataList);

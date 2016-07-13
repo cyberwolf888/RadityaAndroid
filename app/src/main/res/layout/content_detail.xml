@@ -112,6 +112,23 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="2dip"
                 android:paddingTop="6dip"
+                android:text="Uang Muka"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tvUangMuka"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dip"
+                android:paddingTop="0dip"
+                android:text="Rp. 1.000.000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dip"
+                android:paddingTop="6dip"
                 android:text="Hutang"
                 android:textSize="14sp" />
             <TextView

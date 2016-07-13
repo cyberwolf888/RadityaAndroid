@@ -162,6 +162,7 @@ public class LihatKredit extends AppCompatActivity {
                     String tlp = c.getString(helper.TAG_TELP);
                     String alamat = c.getString(helper.TAG_ALAMAT);
                     String status = c.getString(helper.TAG_STATUS);
+                    String uang_muka = helper.formatNumber(Integer.valueOf(c.getString(helper.TAG_UANG_MUKA)));
 
                     // tmp hashmap for single student
                     HashMap<String, String> dataList = new HashMap<String, String>();
@@ -178,6 +179,7 @@ public class LihatKredit extends AppCompatActivity {
                     dataList.put(helper.TAG_TELP, tlp);
                     dataList.put(helper.TAG_ALAMAT, alamat);
                     dataList.put(helper.TAG_STATUS, status);
+                    dataList.put(helper.TAG_UANG_MUKA, uang_muka);
 
                     // adding student to students list
                     itemList.add(dataList);
